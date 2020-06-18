@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="2304" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FollowViewController">
+            <connections>
+                <outlet property="categoryTableView" destination="3HB-gm-Gpp" id="CQu-oe-iMb"/>
+                <outlet property="userTableView" destination="rS2-wr-JW0" id="HOG-P2-ccs"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3HB-gm-Gpp">
+                    <rect key="frame" x="0.0" y="0.0" width="80" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="lMB-GL-JUP"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="aub-2H-u6k"/>
+                        <outlet property="delegate" destination="-1" id="OEs-L6-NqZ"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rS2-wr-JW0">
+                    <rect key="frame" x="80" y="0.0" width="295" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="aVh-p1-yca"/>
+                        <outlet property="delegate" destination="-1" id="L9d-HA-6dH"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="rS2-wr-JW0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9kX-3X-7vl"/>
+                <constraint firstItem="3HB-gm-Gpp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UTt-PE-4kU"/>
+                <constraint firstAttribute="trailing" secondItem="rS2-wr-JW0" secondAttribute="trailing" id="bot-u1-xWn"/>
+                <constraint firstAttribute="bottom" secondItem="3HB-gm-Gpp" secondAttribute="bottom" id="d7P-Tr-dak"/>
+                <constraint firstAttribute="bottom" secondItem="rS2-wr-JW0" secondAttribute="bottom" id="dcv-S8-2iP"/>
+                <constraint firstItem="3HB-gm-Gpp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="j4X-QQ-Or6"/>
+                <constraint firstItem="rS2-wr-JW0" firstAttribute="leading" secondItem="3HB-gm-Gpp" secondAttribute="trailing" id="nIH-Wu-Gb3"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="YvH-1z-ym1"/>
+            <point key="canvasLocation" x="-190" y="-64"/>
+        </view>
+    </objects>
+</document>

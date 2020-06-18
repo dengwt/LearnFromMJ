@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MarkCell" id="KGk-i7-Jjw" customClass="MarkCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uxA-Ta-qvR">
+                        <rect key="frame" x="10" y="10" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="Nuw-Sr-eE1"/>
+                            <constraint firstAttribute="width" constant="50" id="aEZ-sX-LOm"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6B-h1-fEl">
+                        <rect key="frame" x="70" y="10" width="170" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOK-Rd-nSC">
+                        <rect key="frame" x="250" y="21.5" width="50" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="44Y-Na-TC3"/>
+                            <constraint firstAttribute="height" constant="25" id="ER7-dg-ilT"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" title="+ 订阅" backgroundImage="FollowBtnBg">
+                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <state key="highlighted" backgroundImage="FollowBtnClickBg"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42J-QE-gVi">
+                        <rect key="frame" x="70" y="43" width="35.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="42J-QE-gVi" firstAttribute="leading" secondItem="V6B-h1-fEl" secondAttribute="leading" id="0uI-xd-0ha"/>
+                    <constraint firstItem="jOK-Rd-nSC" firstAttribute="leading" secondItem="V6B-h1-fEl" secondAttribute="trailing" constant="10" id="MwU-aR-3rY"/>
+                    <constraint firstItem="V6B-h1-fEl" firstAttribute="top" secondItem="uxA-Ta-qvR" secondAttribute="top" id="PDg-So-kb1"/>
+                    <constraint firstItem="uxA-Ta-qvR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="b7C-nT-Veb"/>
+                    <constraint firstItem="uxA-Ta-qvR" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="cfo-9x-Zdk"/>
+                    <constraint firstItem="V6B-h1-fEl" firstAttribute="leading" secondItem="uxA-Ta-qvR" secondAttribute="trailing" constant="10" id="hvu-A2-cBf"/>
+                    <constraint firstAttribute="trailing" secondItem="jOK-Rd-nSC" secondAttribute="trailing" constant="20" id="mQF-hN-dv1"/>
+                    <constraint firstItem="jOK-Rd-nSC" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="uOe-TT-2uh"/>
+                    <constraint firstItem="42J-QE-gVi" firstAttribute="bottom" secondItem="uxA-Ta-qvR" secondAttribute="bottom" id="ycg-Jp-7wf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="iconImageView" destination="uxA-Ta-qvR" id="Ffh-w3-xBZ"/>
+                <outlet property="subNumLabel" destination="42J-QE-gVi" id="LND-9X-L8p"/>
+                <outlet property="themeLabel" destination="V6B-h1-fEl" id="mtK-zo-Y46"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="FollowBtnBg" width="51" height="25"/>
+        <image name="FollowBtnClickBg" width="51" height="25"/>
+    </resources>
+</document>
