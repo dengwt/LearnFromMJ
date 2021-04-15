@@ -1,0 +1,6 @@
+framework module Pods_LearnFromMJ {
+  umbrella header "Pods-LearnFromMJ-umbrella.h"
+
+  export *
+  module * { export * }
+}
